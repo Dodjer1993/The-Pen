@@ -47,5 +47,10 @@ namespace The_Pen
         {
             label3.Font = new Font("Arial", 16, FontStyle.Regular);
         }
+
+        private void INFO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

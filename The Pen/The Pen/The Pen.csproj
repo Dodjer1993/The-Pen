@@ -93,10 +93,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Pen.exe" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="icons8_pencil_tip.ico" />
+    <None Include="Resources\Pen.exe" />
+    <None Include="Resources\Draw11.png" />
+    <None Include="Resources\Draw.exe" />
+    <None Include="Resources\Draw.png" />
     <None Include="Resources\shutdown_96px.png" />
     <None Include="Resources\Exit0.png" />
     <None Include="Resources\Exit1.png" />

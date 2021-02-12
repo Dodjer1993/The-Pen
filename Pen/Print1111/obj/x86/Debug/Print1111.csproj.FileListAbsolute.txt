@@ -1,0 +1,16 @@
+c:\users\anonymous\documents\visual studio 2010\Projects\Print1111\Print1111\obj\x86\Debug\Print1111.Form1.resources
+c:\users\anonymous\documents\visual studio 2010\Projects\Print1111\Print1111\obj\x86\Debug\Print1111.Properties.Resources.resources
+c:\users\anonymous\documents\visual studio 2010\Projects\Print1111\Print1111\obj\x86\Debug\Print1111.csproj.GenerateResource.Cache
+C:\Users\Anonymous\documents\visual studio 2010\Projects\Print1111\Print1111\obj\x86\Debug\Print1111.csprojResolveAssemblyReference.cache
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\Print1111\Print1111\bin\Debug\Pen.exe
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\Print1111\Print1111\bin\Debug\Pen.pdb
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\Print1111\Print1111\obj\x86\Debug\Pen.exe
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\Print1111\Print1111\obj\x86\Debug\Pen.pdb
+C:\Users\Anonymous\Desktop\Print1111\Print1111\obj\x86\Debug\Pen.exe
+C:\Users\Anonymous\Desktop\Print1111\Print1111\obj\x86\Debug\Pen.pdb
+C:\Users\Anonymous\Desktop\Print1111\Print1111\bin\Debug\Pen.exe
+C:\Users\Anonymous\Desktop\Print1111\Print1111\bin\Debug\Pen.pdb
+C:\Users\Anonymous\Desktop\Print1111\Print1111\obj\x86\Debug\Print1111.csprojResolveAssemblyReference.cache
+C:\Users\Anonymous\Desktop\Print1111\Print1111\obj\x86\Debug\Print1111.Form1.resources
+C:\Users\Anonymous\Desktop\Print1111\Print1111\obj\x86\Debug\Print1111.Properties.Resources.resources
+C:\Users\Anonymous\Desktop\Print1111\Print1111\obj\x86\Debug\Print1111.csproj.GenerateResource.Cache

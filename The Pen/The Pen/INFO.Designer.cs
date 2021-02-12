@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.infoClass1 = new The_Pen.InfoClass();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +87,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 29);
             this.label4.TabIndex = 3;
-            this.label4.Text = "The Pen V 0.1";
+            this.label4.Text = "The Pen V 0.2";
             // 
             // label5
             // 
@@ -115,12 +116,24 @@
             this.infoClass1.CornerRadius = 30;
             this.infoClass1.TargetControl = this;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Harlow Solid Italic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gold;
+            this.label7.Location = new System.Drawing.Point(155, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 26);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Love HN";
+            // 
             // INFO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(410, 201);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -134,6 +147,7 @@
             this.Name = "INFO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INFO";
+            this.Load += new System.EventHandler(this.INFO_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +162,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
     }
 }
