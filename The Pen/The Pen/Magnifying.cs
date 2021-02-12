@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace The_Pen
 {
@@ -21,13 +22,28 @@ namespace The_Pen
         {
             InitializeComponent();
         }
-        
+        private static class Win32Native
+        {
+            public const int DESKTOPVERTRES = 0x75;
+            public const int DESKTOPHORZRES = 0x76;
+
+            [DllImport("gdi32.dll")]
+            public static extern int GetDeviceCaps(IntPtr hDC, int index);
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.TopMost = true;
-
-            bit = new Bitmap(pictureBox1.Width / zoom, pictureBox1.Height / zoom, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            int width, height;
+            using (var g = Graphics.FromHwnd(IntPtr.Zero))
+            {
+                var hDC = g.GetHdc();
+                width = Win32Native.GetDeviceCaps(hDC, Win32Native.DESKTOPHORZRES);
+                height = Win32Native.GetDeviceCaps(hDC, Win32Native.DESKTOPVERTRES);
+                g.ReleaseHdc(hDC);
+            }
+            bit = new Bitmap(pictureBox1.Width/zoom  , pictureBox1.Height /zoom );
             graf = Graphics.FromImage(bit);
+            Size s = new Size (width ,height );
             graf.CopyFromScreen(MousePosition.X - pictureBox1.Width / (zoom * 2), MousePosition.Y - pictureBox1.Height / (zoom * 2), 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
 
             pictureBox1.Image = bit;
@@ -68,6 +84,14 @@ namespace The_Pen
             if (zoom == 2) return;
             else zoom -= 2;
         }
+
+        private void Magnifying_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Owner.Show();
+        }
+
+
+
 
 
 

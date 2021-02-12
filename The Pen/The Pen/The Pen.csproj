@@ -104,11 +104,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_pencil_tip.ico" />
+    <None Include="Resources\Pen.exe" />
     <None Include="Resources\Draw.exe" />
     <None Include="Resources\Zoom1.png" />
     <None Include="Resources\Zoom2.png" />
     <None Include="Resources\pic.png" />
-    <None Include="Resources\Pen.exe" />
     <None Include="Resources\Draw11.png" />
     <None Include="Resources\Draw.png" />
     <None Include="Resources\shutdown_96px.png" />

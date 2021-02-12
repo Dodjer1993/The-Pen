@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_pencil_tip.ico" />
+    <None Include="Resources\ball_point_pen_128px.png" />
+    <None Include="Resources\Pen12.png" />
     <None Include="Resources\Eser.png" />
     <None Include="Resources\Eraser.png" />
   </ItemGroup>

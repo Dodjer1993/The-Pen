@@ -144,9 +144,10 @@ namespace The_Pen
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
             Magnifying M = new Magnifying();
-            M.ShowDialog();
+            M.Owner = this;
+            M.Show();
+            this.Hide();
             
         }
 

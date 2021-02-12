@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_pencil_tip.ico" />
+    <None Include="Resources\Pen12.png" />
     <None Include="Resources\highlighter11.png" />
     <None Include="Resources\highlighter1.png" />
     <None Include="Resources\highlighter.png" />

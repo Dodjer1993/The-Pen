@@ -124,6 +124,9 @@
   <data name="Pen11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pen11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pen12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pen12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shutdown_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdown_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
