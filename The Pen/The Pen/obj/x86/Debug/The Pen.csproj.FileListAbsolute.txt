@@ -18,3 +18,13 @@ C:\Users\Anonymous\Desktop\The Pen\The Pen\obj\x86\Debug\The_Pen.Form1.resources
 C:\Users\Anonymous\Desktop\The Pen\The Pen\obj\x86\Debug\The_Pen.INFO.resources
 C:\Users\Anonymous\Desktop\The Pen\The Pen\obj\x86\Debug\The_Pen.Properties.Resources.resources
 C:\Users\Anonymous\Desktop\The Pen\The Pen\obj\x86\Debug\The Pen.csproj.GenerateResource.Cache
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The Pen.exe
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The Pen.pdb
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\bin\Debug\The Pen.exe
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\bin\Debug\The Pen.pdb
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The Pen.csprojResolveAssemblyReference.cache
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The_Pen.Form1.resources
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The_Pen.INFO.resources
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The_Pen.Properties.Resources.resources
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The Pen.csproj.GenerateResource.Cache
+C:\Users\Anonymous\Desktop\The Pen\Project The Pen V0.3\The Pen\The Pen\obj\x86\Debug\The_Pen.Magnifying.resources

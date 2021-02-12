@@ -23,14 +23,17 @@ namespace Draw
         Point sp = new Point(0, 0);
         Point ep = new Point(0, 0);
         int k = 0;
-        private int cX, cY, x, y, dX, dY;
+        private int cX, cY, dX, dY;
         Pen pen;
         Color color;
         int size;
+
+        int Case;
         private void Form1_Load(object sender, EventArgs e)
         {
-            size = 2;// حجم الخط في البداية
-            color = Color.Black;
+            color = Color.Red;
+            size = 2;
+            Case = 1;
             //toolStrip1.Location = new Point(Screen.PrimaryScreen.Bounds.Width - toolStrip1.Width, Screen.PrimaryScreen.Bounds.Height - Screen.PrimaryScreen.Bounds.Height);
             Bitmap B = new Bitmap(new Bitmap(Properties.Resources.Pen11), 48, 48);// كود تغير شكل الماوس
             this.Cursor = new Cursor(B.GetHicon());
@@ -50,45 +53,86 @@ namespace Draw
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (k == 0)
+            if (Case == 1)
             {
-                x = e.X;
-                y = e.Y;
-                dX = e.X - cX;
-                dY = e.Y - cY;
+                if (k == 0)
+                {
+                    dX = e.X - cX;
+                    dY = e.Y - cY;
+                }
+            }
+            else if (Case == 3)
+            {
+                if (k == 0)
+                {
+
+                    dX = e.X - cX;
+                    dY = e.Y - cY;
+                }
             }
         }
 
         private void pictureBox1_MouseDown_1(object sender, MouseEventArgs e)
         {
-            sp = e.Location;
-            if (e.Button == MouseButtons.Left)
+            if (Case == 1)
             {
-                k = 1;
+                sp = e.Location;
+                if (e.Button == MouseButtons.Left)
+                {
+                    k = 1;
+                }
             }
-            cX = e.X;
-            cY = e.Y;
+            else if (Case == 3)
+            {
+                sp = e.Location;
+                if (e.Button == MouseButtons.Left)
+                {
+                    k = 1;
+                }
+            }
         }
 
         private void pictureBox1_MouseMove_1(object sender, MouseEventArgs e)
         {
-            if (k == 1)
+            if (Case == 1)
             {
-                ep = e.Location;
-                x = e.X;
-                y = e.Y;
-                //حجم الخط هنا
-                //تنسيق نوع الخط ايضا
-                
-                pen = new Pen(color , size ) { StartCap = System.Drawing.Drawing2D.LineCap.Round };
-                g.DrawLine(pen, sp, ep);
-                sp = ep;
+                if (k == 1)
+                {
+                    ep = e.Location;
+                    //حجم الخط هنا
+                    //تنسيق نوع الخط ايضا
+                    pen = new Pen(color, size) { StartCap = System.Drawing.Drawing2D.LineCap.Round };
+                    g.DrawLine(pen, sp, ep);
+                    sp = ep;
+                }
             }
+            else if (Case == 3)
+            {
+                if (k == 1)
+                {
+                    ep = e.Location;
+                    //حجم الخط هنا
+                    //تنسيق نوع الخط ايضا
+                    Color baseColor = Color.White ;
+                    //color = Color.FromArgb(30, baseColor);
+                    pen = new Pen(baseColor, 20) { StartCap = System.Drawing.Drawing2D.LineCap.Round };
+                    g.DrawLine(pen, sp, ep);
+                    sp = ep;
+                }
+            }
+            
         }
 
         private void pictureBox1_MouseUp_1(object sender, MouseEventArgs e)
         {
-            k = 0;
+            if (Case == 1)
+            {
+                k = 0;
+            }
+            else if (Case == 3)
+            {
+                k = 0;
+            }
         }
         // لون الخط
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
@@ -127,6 +171,7 @@ namespace Draw
         }
         // لون الخط
         //حجم الخط
+
         private void toolStripMenuItem14_Click(object sender, EventArgs e)
         {
             size = 4;
@@ -144,12 +189,9 @@ namespace Draw
         {
             size = 8;
         }
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-            size = int.Parse(toolStripComboBox1.Text);
-        }
+
         //حجم الخط
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)//حفظ الصورة
         {              
             Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             Graphics g = Graphics.FromImage(bmp);
@@ -184,12 +226,32 @@ namespace Draw
         {
             Application.Exit();
         }
-        
 
+        private void eraserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Case = 3;
+            if (Case == 3)
+            {
+                Bitmap B = new Bitmap(new Bitmap(Properties.Resources.Eraser ), 48, 48);// كود تغير شكل الماوس
+                this.Cursor = new Cursor(B.GetHicon());
+            }
+        }
 
+        private void penToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Case = 1;
+            if (Case == 1)
+            {
+                color = Color.Red;
+                Bitmap B = new Bitmap(new Bitmap(Properties.Resources.Pen11 ), 48, 48);// كود تغير شكل الماوس
+                this.Cursor = new Cursor(B.GetHicon());
+            }
+        }
 
-
-
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+            size = int.Parse(toolStripComboBox1.Text );
+        }
 
     }
 }

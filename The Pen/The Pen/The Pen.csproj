@@ -55,6 +55,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hotkey.cs" />
     <Compile Include="INFO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,12 @@
     <Compile Include="InfoClass.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Magnifying.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Magnifying.Designer.cs">
+      <DependentUpon>Magnifying.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -71,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="INFO.resx">
       <DependentUpon>INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Magnifying.resx">
+      <DependentUpon>Magnifying.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,9 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_pencil_tip.ico" />
+    <None Include="Resources\Draw.exe" />
+    <None Include="Resources\Zoom1.png" />
+    <None Include="Resources\Zoom2.png" />
+    <None Include="Resources\pic.png" />
     <None Include="Resources\Pen.exe" />
     <None Include="Resources\Draw11.png" />
-    <None Include="Resources\Draw.exe" />
     <None Include="Resources\Draw.png" />
     <None Include="Resources\shutdown_96px.png" />
     <None Include="Resources\Exit0.png" />

@@ -87,7 +87,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 29);
             this.label4.TabIndex = 3;
-            this.label4.Text = "The Pen V 0.2";
+            this.label4.Text = "The Pen V 0.3";
             // 
             // label5
             // 

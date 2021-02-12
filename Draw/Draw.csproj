@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_pencil_tip.ico" />
+    <None Include="Resources\Eser.png" />
+    <None Include="Resources\Eraser.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

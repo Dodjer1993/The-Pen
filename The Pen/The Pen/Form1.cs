@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.InteropServices;
+using WindowAPITutorial;
 
 namespace The_Pen
 {
@@ -18,7 +20,14 @@ namespace The_Pen
             InitializeComponent();
         }
         bool close = false;
-        private void button1_Click(object sender, EventArgs e)
+        //مفتاح الاختصار
+        [DllImport("user32.dll")]
+        public static extern IntPtr FindWindow(String sClassName, String sAppName);
+
+        private IntPtr thisWindow;
+        private Hotkey hotkey;
+        //مفتاح الاختصار
+        public void ShowPen()
         {
             int x = this.Top;
             this.Top = Screen.PrimaryScreen.Bounds.Height + 1000;
@@ -28,6 +37,10 @@ namespace The_Pen
             System.Diagnostics.Process.Start(red);
             System.Threading.Thread.Sleep(1000);
             this.Top = x;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowPen();
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -128,5 +141,48 @@ namespace The_Pen
         {
             button4.BackgroundImage = Properties.Resources.Draw;
         }
-    }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            Magnifying M = new Magnifying();
+            M.ShowDialog();
+            
+        }
+
+        private void button5_MouseEnter(object sender, EventArgs e)
+        {
+            button5.BackgroundImage = Properties.Resources.Zoom2;
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            button5.BackgroundImage = Properties.Resources.Zoom1;
+        }
+        //مفتاح الاختصار
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            hotkey.UnRegisterHotKeys();
+        }
+
+        protected override void WndProc(ref Message keyPressed)
+        {
+            if (keyPressed.Msg == 0x0312)
+            {
+                IntPtr hotkeyID = keyPressed.WParam;
+                ShowPen();
+            }
+            base.WndProc(ref keyPressed);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            thisWindow = FindWindow(null, "Window tool");
+            hotkey = new Hotkey(thisWindow);
+            hotkey.RegisterHotKeys();
+            
+        }
+        //مفتاح الاختصار
+     }
 }

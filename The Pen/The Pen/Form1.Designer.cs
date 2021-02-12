@@ -35,6 +35,7 @@
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -79,12 +80,30 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(70, 1);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(34, 32);
+            this.button5.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.button5, "Magnifying Glass");
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button4.BackgroundImage = global::The_Pen.Properties.Resources.Draw;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(36, 1);
+            this.button4.Location = new System.Drawing.Point(0, 1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(34, 32);
             this.button4.TabIndex = 3;
@@ -101,7 +120,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(1, 1);
+            this.button3.Location = new System.Drawing.Point(105, 1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(34, 32);
             this.button3.TabIndex = 2;
@@ -118,7 +137,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(106, 1);
+            this.button2.Location = new System.Drawing.Point(140, 1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(34, 32);
             this.button2.TabIndex = 1;
@@ -135,11 +154,11 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(71, 1);
+            this.button1.Location = new System.Drawing.Point(35, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 32);
             this.button1.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.button1, "Pen");
+            this.toolTip1.SetToolTip(this.button1, "Pen\r\nCtrl+Q");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
@@ -150,7 +169,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(139, 33);
+            this.ClientSize = new System.Drawing.Size(174, 32);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -163,6 +183,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Window tool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -180,6 +202,7 @@
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
 
     }
 }
