@@ -8,6 +8,8 @@ About the Program
 -------
 With this Program,You can Drawing on the desktop so that It can help clarify what you want in your explanations
 
+![alt text](https://k.top4top.io/p_1870o1dt01.gif)
+
 Language
 -------
 C# 
