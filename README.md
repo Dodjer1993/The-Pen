@@ -24,7 +24,7 @@ Windos 10
 
 Releases
 -------
-https://github.com/Dodjer1993/RcC-Menu-tool/releases
+https://github.com/Dodjer1993/The-Pen/releases
 
 Youtube
 ------------------
@@ -46,7 +46,7 @@ https://www.youtube.com/watch?v=AfOdRQJS_30&ab_channel=Dodjer
 
 للتحميل
 -------
-https://github.com/Dodjer1993/RcC-Menu-tool/releases
+https://github.com/Dodjer1993/The-Pen/releases
 
 
 
